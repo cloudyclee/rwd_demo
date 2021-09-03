@@ -38,19 +38,22 @@ export default {};
 </template>
 
 <style lang="sass" scoped>
+@import "~@/assets/css/global.sass"
+
 #nav
-	width: 100%
-	max-width: 750px
-	height: 98px
-	border-radius: 30px
+	+block
+	min-width: $maxWidth
+	height: 70px
+	border-radius: 20px
 	filter: drop-shadow(0 0 5px rgba(204, 204, 204, 0.8))
-	background-color: #ffffff
+	background-color: $bgc_white
 	display: flex
 	justify-content: space-around
 	align-items: center
 	position: fixed
 	bottom: -15px
 	padding: 5px 0px
+	padding-bottom: 20px
 	z-index: 1000
 	a
 		display: inline-block
@@ -61,11 +64,11 @@ export default {};
 			justify-content: center
 			align-items: center
 			span
-				font-size: 20px
-				color: rgb(183, 183, 183)
-				line-height: 32px
+				+text($fz: 14px, $c: $color_gray, $lh: 1em)
+			img
+				transform: scale(0.6)
 	.router-link-active
 		.nav-item
 			span
-				color: rgb(79, 130, 244)
+				color: $color_blue
 </style>

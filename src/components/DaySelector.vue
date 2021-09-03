@@ -49,44 +49,38 @@ export default {
 </template>
 
 <style lang="sass" scoped>
+@import "~@/assets/css/global.sass"
+
 ul
 	width: 120%
 	position: relative
 	list-style: none
 	padding: 0
 	margin: 0
-	border-bottom: solid 2px #f5f6fa
+	border-bottom: solid 2px $bgc_gray2
 	white-space: nowrap
+	li:nth-child(1)
+		a
+			font-family: PingFang SC
 	li
 		display: inline
 		cursor: pointer
 		user-select: none
 		a
+			+text($fz: 17px, $c: $color_gray)
 			display: inline-block
-			padding-top: 16px
-			padding-bottom: 5px
+			padding-top: 8px
+			padding-bottom: 3px
 			width: 18%
-			max-width: 135px
-			font-size: 22px
-			line-height: 32px
+			max-width: 65px
 			text-align: center
-			color: rgb(164, 169, 180)
-			font-weight: 500
+			font-family: DINPro Medium
 			&.selected-item
 				color: rgb(60, 74, 86)
 				position: relative
 				&::after
-					content: ""
-					display: block
-					position: absolute
-					left: 50%
-					top: calc(100% - 2px)
-					transform: translateX(-50%)
+					+pseudo($t: calc(100% - 2px), $tt: 0%)
 					width: 55px
 					height: 2px
-					background-color: rgb(60, 74, 86)
-					z-index: 10
-@media screen and (max-width: 768px)
-	ul
-		li
+					background-color: $color_black
 </style>

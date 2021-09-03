@@ -18,34 +18,45 @@ export default {};
 </template>
 
 <style lang="sass" scoped>
-@font-face
-	font-family: DINPro Bold
-	src: url("~@/assets/font/DINPro-Bold_13934.ttf") format("truetype")
+@import "~@/assets/css/global.sass"
 
 header
-	max-width: 710px
-	margin: 0 auto
-	padding-top: 40px
-	height: 58px
+	+block
+	max-width: $maxWidth
+	position: fixed
+	padding: 15px 0px
+	height: 44px
+	z-index: 3000
+	background-color: $bgc_white
 	.logo_wrapper
 		display: inline-block
 		vertical-align: middle
-		height: 58px
-	.rest-amount
-		display: inline-block
-		width: calc(100% - 186px - 28px)
-		vertical-align: middle
-		text-align: right
-		span
-			margin-right: 20px
-			font-family: DINPro Bold
-			font-size: 30px
-			color: rgb(79, 130, 244)
-			letter-spacing: 1.32px
+		width: 45%
+		margin-top: 10px
 		img
-			margin-right: 50px
+			width: 140px
 	.btn_wrapper
 		display: inline-block
 		vertical-align: middle
+		text-align: right
 		height: 28px
+		width: 8%
+		img
+			margin-right: 10px
+	.rest-amount
+		display: inline-block
+		vertical-align: middle
+		margin-right: 20px
+		span
+			+text($fz: 22px, $c: $color_blue)
+			display: inline-block
+			font-family: DINPro Bold
+			letter-spacing: 1.32px
+			vertical-align: middle
+		img
+			display: inline-block
+			vertical-align: middle
+			width: 16px
+			margin-top: 1px
+			margin-left: 10px
 </style>

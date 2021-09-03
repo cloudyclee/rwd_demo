@@ -62,23 +62,21 @@ export default {
 </template>
 
 <style lang="sass" scoped>
+@import "~@/assets/css/global.sass"
+
 .title-row
-	width: 100%
-	max-width: 704px
-	margin: 0 auto
-	padding: 8px 3px
-	border-bottom: solid 1px #efefef
+	+block
+	padding: 3px 3px
+	border-bottom: solid 1px $bgc_gray
 	img
 		display: inline-block
 		vertical-align: middle
+		width: 24px
 	span
+		+text($fz: 17px, $c: $color_black)
 		display: inline-block
 		vertical-align: middle
-		font-size: 22px
-		line-height: 32px
-		color: rgb(60, 74, 86)
-		font-weight: 500
-		margin-left: 10px
+		margin-left: 5px
 	.title
 		display: inline-block
 		width: 50%
@@ -87,8 +85,10 @@ export default {
 		width: 50%
 		text-align: right
 		span
-			color: rgb(164, 169, 180)
+			color: $color_gray
 			margin-right: 10px
+		img
+			width: 7px
 
 ul
 	width: 112%
@@ -104,42 +104,33 @@ ul
 		a
 			position: relative
 			display: inline-block
-			padding: 16px 0px
-			padding-bottom: 10px
+			padding: 8px 0px
+			padding-bottom: 5px
 			width: 14.28%
-			max-width: 135px
-			z-index: 10
+			max-width: 65px
 			.anchor_pic
 				position: relative
-				width: 86px
-				height: 86px
+				width: 40px
+				height: 40px
 				margin: 0 auto
-				border-radius: 43px
-				background-color: #000000
-				border: 3px solid #ff008a
+				border-radius: 100%
+				background-color: $color_black
+				border: 1.5px solid $color_pink
 				&::after
+					+pseudo($t: 105%)
+					+text($fz: 14px, $lh: 19px, $c: $bgc_white)
+					transform: translate(-50%, -50%) scale(0.7)
 					content: attr(data-value)
-					display: block
-					position: absolute
-					left: 50%
-					top: 100%
-					transform: translate(-50%, -50%)
-					width: 52px
 					height: 19px
-					border-radius: 3px
-					background-color: #ff008a
-					border: 2px solid #ffffff
-					z-index: 50
+					padding: 0px 5px
+					background-color: $color_pink
+					border-radius: 5px
+					border: 3px solid $bgc_white
 					text-align: center
-					color: #fff
-					font-size: 14px
-					line-height: 19px
+					z-index: 50
 			span
+				+text($fz: 12px, $lh: 25px, $c: $color_black)
 				display: block
-				font-size: 20px
-				line-height: 25px
 				text-align: center
-				color: rgb(60, 74, 86)
-				font-weight: 500
-				margin-top: 13px
+				margin-top: 6px
 </style>

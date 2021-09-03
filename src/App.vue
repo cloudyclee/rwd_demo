@@ -15,31 +15,23 @@ export default {
 	<div class="mask"></div>
 	<div class="container">
 		<Header />
+		<div class="mt-74"></div>
 		<router-view />
+		<div class="mb-95"></div>
 		<Navbar />
 	</div>
 	<div class="mask"></div>
 </template>
 
 <style lang="sass">
-@font-face
-	font-family: "PingFang SC"
-	src: url("//db.onlinewebfonts.com/t/05e476e067ffef74ca5686f229c40a63.eot")
-	src: url("//db.onlinewebfonts.com/t/05e476e067ffef74ca5686f229c40a63.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/05e476e067ffef74ca5686f229c40a63.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/05e476e067ffef74ca5686f229c40a63.woff") format("woff"), url("//db.onlinewebfonts.com/t/05e476e067ffef74ca5686f229c40a63.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/05e476e067ffef74ca5686f229c40a63.svg#PingFang SC") format("svg")
-@font-face
-	font-family: DINPro Bold
-	src: url("~@/assets/font/DINPro-Bold_13934.ttf") format("truetype")
-
-*
-	font-family: PingFang SC
-	position: relative
+@import "~@/assets/css/global.sass"
 
 html, body
 	width: 100%
-	height: 2010px
+	max-height: 1625px
 	margin: 0
 	padding: 0
-	background-color: #333
+	background-color: $bgc_white
 
 #app
 	width: 100%
@@ -48,10 +40,10 @@ html, body
 	justify-content: center
 	align-items: center
 	.container
-		max-width: 750px
+		max-width: 375px
 		width: 100%
 		height: 100%
-		background-color: #fff
+		background-color: $bgc_white
 		overflow-x: hidden
 	.mask
 		position: relative
@@ -59,7 +51,12 @@ html, body
 		height: 100%
 		width: 100%
 		max-width: calc((100% - 750px) / 2)
-
+.mt-74
+	width: 100%
+	height: 74px
+.mb-95
+	width: 100%
+	height: 80px
 h1
 	text-align: center
 	margin-top: 50px

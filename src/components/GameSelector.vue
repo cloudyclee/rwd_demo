@@ -35,7 +35,7 @@ export default {
 				img: require("../assets/tennis.png"),
 			},
 		]);
-		const showSelectedBar = (e) => {
+		const showSelected = (e) => {
 			const index = e.currentTarget.dataset.num;
 			data.forEach((item) => {
 				item.selected = false;
@@ -53,7 +53,7 @@ export default {
 		return {
 			ulRef,
 			data,
-			showSelectedBar,
+			showSelected,
 		};
 	},
 };
@@ -63,7 +63,7 @@ export default {
 	<ul ref="ulRef">
 		<li v-for="(item, idx) in data" :key="item.value">
 			<a
-				@click.prevent="showSelectedBar"
+				@click.prevent="showSelected"
 				:class="{ 'selected-item': item.selected }"
 				:data-num="idx"
 			>
@@ -75,13 +75,14 @@ export default {
 </template>
 
 <style lang="sass" scoped>
+@import "~@/assets/css/global.sass"
 ul
 	width: 120%
 	position: relative
 	list-style: none
 	padding: 0
 	margin: 0
-	border-bottom: solid 2px #f5f6fa
+	border-bottom: solid 2px $bgc_gray2
 	white-space: nowrap
 	li
 		display: inline
@@ -90,38 +91,29 @@ ul
 		a
 			position: relative
 			display: inline-block
-			padding: 16px 0px
+			padding-top: 8px
+			padding-bottom: 3px
 			width: 18%
-			max-width: 135px
-			z-index: 10
+			max-width: 65px
+			text-align: center
 			img
 				display: block
 				margin: 0 auto
+				width: 30px
 			span
+				+text($fz: 17px, $c: $color_gray)
 				display: block
-				font-size: 22px
-				line-height: 32px
 				text-align: center
-				color: rgb(164, 169, 180)
-				font-weight: 500
 				margin-top: 10px
 			&.selected-item
-				color: rgb(60, 74, 86)
 				position: relative
+				span
+					color: $color_black
 				&::before
-					content: ""
-					display: block
-					position: absolute
-					left: 50%
-					top: 50%
-					transform: translate(-50%, -52%)
-					// background-image: url("~@/assets/selected.png")
-					// background-repeat: no-repeat
-					// background-position: center
-					width: 86px
-					height: 86px
+					+pseudo($tt: -52%)
+					width: 50px
+					height: 75px
 					border-radius: 15px
 					filter: drop-shadow(0 0 4px rgba(79,130,244,0.56))
-					background-color: #ffffff
 					border: 1px solid
 </style>

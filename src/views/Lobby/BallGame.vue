@@ -48,24 +48,20 @@ export default {
 </template>
 
 <style lang="sass" scoped>
+@import "~@/assets/css/global.sass"
+
 .blank
 	width: 100%
 	height: 5px
-	background-color: lighten(rgb(79, 130, 244), 30)
+	background-color: lighten($color_blue, 30)
 .title
-	width: 100%
-	max-width: 710px
-	margin: 0 auto
-	padding: 5px 0px
-	border-bottom: solid 2px #efefef
+	+block
+	border-bottom: solid 2px $bgc_gray
 	span
 		display: inline-block
 		width: 50%
-		font-size: 22px
-		line-height: 32px
-		font-weight: bold
-		color: rgb(60, 74, 86)
+		+text($fw: bold)
 		&.arrow
 			text-align: right
-			color: rgb(164, 169, 180)
+			color: $color_gray
 </style>

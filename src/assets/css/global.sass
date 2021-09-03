@@ -1,0 +1,47 @@
+$color_gray: rgb(164, 169, 180)
+$color_gray2: rgb(126, 137, 166)
+$color_black: rgb(64, 70, 86)
+$color_blue: rgb(79, 130, 244)
+$color_blue2: #90b1ff
+$color_pink: #ff008a
+$bgc_black: #000
+$bgc_white: #fff
+$bgc_gray: #efefef
+$bgc_gray2: #f5f6fa
+
+$maxWidth: 375px
+
+@font-face
+    font-family: "PingFang SC"
+    src: url("//db.onlinewebfonts.com/t/05e476e067ffef74ca5686f229c40a63.eot")
+    src: url("//db.onlinewebfonts.com/t/05e476e067ffef74ca5686f229c40a63.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/05e476e067ffef74ca5686f229c40a63.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/05e476e067ffef74ca5686f229c40a63.woff") format("woff"), url("//db.onlinewebfonts.com/t/05e476e067ffef74ca5686f229c40a63.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/05e476e067ffef74ca5686f229c40a63.svg#PingFang SC") format("svg")
+@font-face
+    font-family: DINPro Bold
+    src: url("~@/assets/font/DINPro-Bold_13934.ttf") format("truetype")
+@font-face
+    font-family: DINPro Medium
+    src: url("~@/assets/font/DINPro-Medium_13936.ttf") format("truetype")
+
+*
+    font-family: PingFang SC
+    position: relative
+
+@mixin block
+    width: 100%
+    max-width: $maxWidth * 0.95
+    margin: 0 auto
+
+@mixin text($fz: 18px, $fw: normal, $lh: 32px, $c: $color_black)
+    font-size: $fz
+    font-weight: $fw
+    line-height: $lh
+    color: $c
+
+@mixin pseudo($t: 50%, $tt: -50%)
+    content: ""
+    display: block
+    position: absolute
+    left: 50%
+    top: $t
+    transform: translate(-50%, $tt)
+    z-index: 10
