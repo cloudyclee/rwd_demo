@@ -14,5 +14,5 @@ export default {};
 	background-image: url("~@/assets/ad.png")
 	background-size: 100% auto
 	background-repeat: no-repeat
-	height: 47px
+	height: 12vw
 </style>

@@ -167,6 +167,7 @@ img
 			margin-right: 10px
 		img
 			width: 7px
+			margin-right: 5px
 .status-row
 	+block
 	display: flex
@@ -212,8 +213,6 @@ img
 				width: 20px
 			span
 				+text($fz: 16px, $fw: bold, $c: $color_black)
-				margin-left: 5px
-				letter-spacing: 1.32px
 			.score
 				+text($fz: 16px, $fw: bold, $c: $color_blue)
 				margin-right: 5px
@@ -224,7 +223,7 @@ img
 			img
 				display: inline-block
 				margin-left: 10px
-				width: 18px
+				+imgSize(5.625vw, 26px)
 	.anchor
 		background-color: lighten($color_black, 10)
 		span
@@ -299,9 +298,21 @@ img
 					background-color: $color_gray2
 		.double_arrow
 			position: absolute
-			left: 97%
-			top: 50%
-			transform: translateY(20%)
+			left: 92%
+			top: 47%
+			transform: translate(1.5vw, 20%)
 .mt-10
 	margin-top: 7px
+@media screen and (min-width: 375px)
+	.info-row
+		.game
+			.teamB, .teamR
+				span
+					margin-left: 1.3vw
+@media screen and (min-width: 500px)
+	.info-row
+		.game
+			.teamB, .teamR
+				.score
+					margin-right: 15px
 </style>

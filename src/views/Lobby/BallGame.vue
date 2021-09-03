@@ -62,6 +62,8 @@ export default {
 		width: 50%
 		+text($fw: bold)
 		&.arrow
+			width: calc(50% - 5px)
 			text-align: right
 			color: $color_gray
+			margin-right: 5px
 </style>

@@ -42,18 +42,18 @@ export default {};
 
 #nav
 	+block
-	min-width: $maxWidth
-	height: 70px
-	border-radius: 20px
-	filter: drop-shadow(0 0 5px rgba(204, 204, 204, 0.8))
-	background-color: $bgc_white
+	position: fixed
 	display: flex
 	justify-content: space-around
-	align-items: center
-	position: fixed
+	align-items: flex-end
+	height: 70px
+	left: 0
 	bottom: -15px
+	border-radius: 20px
 	padding: 5px 0px
 	padding-bottom: 20px
+	background-color: $bgc_white
+	filter: drop-shadow(0 0 5px rgba(204, 204, 204, 0.8))
 	z-index: 1000
 	a
 		display: inline-block
@@ -64,7 +64,7 @@ export default {};
 			justify-content: center
 			align-items: center
 			span
-				+text($fz: 14px, $c: $color_gray, $lh: 1em)
+				+text($fz: 14px, $c: $color_gray, $lh: 25px)
 			img
 				transform: scale(0.6)
 	.router-link-active

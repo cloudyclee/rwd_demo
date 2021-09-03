@@ -66,7 +66,7 @@ export default {
 
 .title-row
 	+block
-	padding: 3px 3px
+	padding: 3px 0px
 	border-bottom: solid 1px $bgc_gray
 	img
 		display: inline-block
@@ -89,9 +89,9 @@ export default {
 			margin-right: 10px
 		img
 			width: 7px
+			margin-right: 5px
 
 ul
-	width: 112%
 	position: relative
 	list-style: none
 	padding: 0
@@ -106,12 +106,13 @@ ul
 			display: inline-block
 			padding: 8px 0px
 			padding-bottom: 5px
-			width: 14.28%
-			max-width: 65px
+			width: 15.5%
 			.anchor_pic
 				position: relative
-				width: 40px
-				height: 40px
+				width: 12.5vw
+				height: 12.5vw
+				max-width: 83px
+				max-height: 83px
 				margin: 0 auto
 				border-radius: 100%
 				background-color: $color_black
@@ -133,4 +134,15 @@ ul
 				display: block
 				text-align: center
 				margin-top: 6px
+@media screen and (min-width: 500px)
+	ul
+		li
+			a
+				padding: 16px 0px
+				.anchor_pic
+					&::after
+						transform: translate(-50%, -50%)
+				span
+					font-size: 17px
+					margin-top: 16px
 </style>

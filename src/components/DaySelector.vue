@@ -52,7 +52,6 @@ export default {
 @import "~@/assets/css/global.sass"
 
 ul
-	width: 120%
 	position: relative
 	list-style: none
 	padding: 0
@@ -72,7 +71,6 @@ ul
 			padding-top: 8px
 			padding-bottom: 3px
 			width: 18%
-			max-width: 65px
 			text-align: center
 			font-family: DINPro Medium
 			&.selected-item

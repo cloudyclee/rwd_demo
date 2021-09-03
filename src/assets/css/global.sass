@@ -9,7 +9,7 @@ $bgc_white: #fff
 $bgc_gray: #efefef
 $bgc_gray2: #f5f6fa
 
-$maxWidth: 375px
+$maxWidth: 1024px
 
 @font-face
     font-family: "PingFang SC"
@@ -28,7 +28,7 @@ $maxWidth: 375px
 
 @mixin block
     width: 100%
-    max-width: $maxWidth * 0.95
+    //max-width: $maxWidth * 0.95
     margin: 0 auto
 
 @mixin text($fz: 18px, $fw: normal, $lh: 32px, $c: $color_black)
@@ -45,3 +45,7 @@ $maxWidth: 375px
     top: $t
     transform: translate(-50%, $tt)
     z-index: 10
+
+@mixin imgSize($w, $maxw)
+    width: $w
+    max-width: $maxw

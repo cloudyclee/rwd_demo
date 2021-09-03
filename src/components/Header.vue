@@ -22,10 +22,8 @@ export default {};
 
 header
 	+block
-	max-width: $maxWidth
 	position: fixed
 	padding: 15px 0px
-	height: 44px
 	z-index: 3000
 	background-color: $bgc_white
 	.logo_wrapper
@@ -34,21 +32,22 @@ header
 		width: 45%
 		margin-top: 10px
 		img
-			width: 140px
+			+imgSize(37.5vw, 186px)
 	.btn_wrapper
 		display: inline-block
 		vertical-align: middle
 		text-align: right
-		height: 28px
 		width: 8%
+		margin-top: 5px
 		img
-			margin-right: 10px
+			margin-right: 5px
+			width: 20px
 	.rest-amount
 		display: inline-block
 		vertical-align: middle
-		margin-right: 20px
+		width: 47%
 		span
-			+text($fz: 22px, $c: $color_blue)
+			+text($fz: 20px, $c: $color_blue)
 			display: inline-block
 			font-family: DINPro Bold
 			letter-spacing: 1.32px
@@ -56,7 +55,15 @@ header
 		img
 			display: inline-block
 			vertical-align: middle
-			width: 16px
+			width: 12px
 			margin-top: 1px
 			margin-left: 10px
+@media screen and (min-width: 500px)
+	header
+		.logo_wrapper
+			width: 40%
+		.btn_wrapper
+			width: 8%
+		.rest-amount
+			width: 42%
 </style>
